@@ -1,4 +1,4 @@
-package linkedlist
+package removenthnode
 
 import "fmt"
 
