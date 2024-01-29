@@ -2,35 +2,31 @@ package linkedlist
 
 import "fmt"
 
-type EduLinkedListNode struct {
+type LinkedListNode struct {
 	data int
-	next *EduLinkedListNode
+	next *LinkedListNode
 }
 
-func NewLinkedListNode(data int, next *EduLinkedListNode) *EduLinkedListNode {
-	node := new(EduLinkedListNode)
+func NewLinkedListNode(data int, next *LinkedListNode) *LinkedListNode {
+	node := new(LinkedListNode)
 	node.data = data
 	node.next = next
 	return node
 }
 
-func InitLinkedListNode(data int) *EduLinkedListNode {
-	node := new(EduLinkedListNode)
+func InitLinkedListNode(data int) *LinkedListNode {
+	node := new(LinkedListNode)
 	node.data = data
 	node.next = nil
 	return node
 }
 
-type EduLinkedList struct {
-	head *EduLinkedListNode
+type LinkedList struct {
+	head *LinkedListNode
 }
 
-/*
-InsertNodeAtHead method will insert a LinkedListNode at head
-
-	of a linked list.
-*/
-func (l *EduLinkedList) InsertNodeAtHead(node *EduLinkedListNode) {
+// InsertNodeAtHead method will insert a LinkedListNode at head of a linked list.
+func (l *LinkedList) InsertNodeAtHead(node *LinkedListNode) {
 	if l.head == nil {
 		l.head = node
 	} else {
@@ -39,12 +35,8 @@ func (l *EduLinkedList) InsertNodeAtHead(node *EduLinkedListNode) {
 	}
 }
 
-/*
-	CreateLinkedList method will create the linked list using
-
-the given integer array with the help of InsertAthead method.
-*/
-func (l *EduLinkedList) CreateLinkedList(lst []int) {
+// CreateLinkedList method will create the linked list using the given integer array with the help of InsertAthead method.
+func (l *LinkedList) CreateLinkedList(lst []int) {
 	for i := len(lst) - 1; i >= 0; i-- {
 		newNode := InitLinkedListNode(lst[i])
 		l.InsertNodeAtHead(newNode)
@@ -52,7 +44,7 @@ func (l *EduLinkedList) CreateLinkedList(lst []int) {
 }
 
 // DisplayLinkedList method will display the elements of linked list.
-func (l *EduLinkedList) DisplayLinkedList() {
+func (l *LinkedList) DisplayLinkedList() {
 	temp := l.head
 	fmt.Print("[")
 	for temp != nil {
