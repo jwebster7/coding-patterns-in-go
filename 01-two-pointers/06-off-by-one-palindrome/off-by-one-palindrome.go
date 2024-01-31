@@ -1,4 +1,4 @@
-package oneoffpalindrome
+package offbyonepalindrome
 
 func validPalindrome(input string) bool {
 

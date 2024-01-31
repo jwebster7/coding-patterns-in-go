@@ -1,0 +1,6 @@
+go 1.21.6
+
+use (
+	./01-two-pointers
+	./02-fast-and-slow-pointers
+)
