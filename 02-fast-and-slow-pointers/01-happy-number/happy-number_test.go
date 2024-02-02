@@ -14,6 +14,7 @@ func TestIsHappy(t *testing.T) {
 		19:         true,
 		7:          true,
 		8:          false,
+		1000000001: false,
 		2147483646: false,
 	}
 
