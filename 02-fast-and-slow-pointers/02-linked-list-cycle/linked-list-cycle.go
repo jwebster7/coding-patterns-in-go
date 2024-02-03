@@ -1,8 +1,8 @@
 package linkedlistcycle
 
+// detectCycle finds a cycle within a linked list if one exists.
+// It's time complexity is O(n), with a space complexity of O(1).
 func detectCycle(head *LinkedListNode) bool {
-
-	// Replace this placeholder return statement with your code
 
 	// Initialize a slow and fast pointer at the head.
 	slow, fast := head, head
